@@ -1,0 +1,233 @@
+:root {
+    --pink-primary-color:#CF006E;
+    --pink-secondary-color: #DA4093;
+    --pink-tertiary-color: #CF006E1A;
+
+    --blue-primary-color: #00A3E0;
+    --blue-secondary-color: #7ED0EF;
+    --blue-tertiary-color: #00A3E01A;
+
+    --yellow-primary-color: #FED141;
+    --yellow-secondary-color: #FCD969;
+    --yellow-tertiary-color: #FED14133;
+}
+
+*{
+    font-family: sans-serif;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80%;
+}
+
+.column-responsive{
+    width: 50%;
+}
+
+.col-6{
+    width: 50%;
+}
+
+.preview{
+    width: 320px;
+    padding: 1rem;
+    padding-top: 4rem;
+    object-fit: contain;
+}
+
+/*Custom button/ Upload button*/
+.custom-btn{
+    width: 100%;
+    line-height: 1.5;
+    padding: 15px;
+    border: 1px solid transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.custom-btn:hover{
+    opacity: 0.8;
+}
+
+.custom-btn .upload-icon{
+    float: left;
+    padding: 5px;
+}
+
+.custom-btn .upload-icon:hover{
+    opacity: 0.7;
+}
+
+.custom-btn .upload-text{
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.custom-btn .close{
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.custom-btn .close:hover{
+    opacity: 0.7;
+}
+/*End*/
+
+.title{
+    font-size: 3rem;
+}
+
+.sub-title{
+    margin: 0px;
+    line-height: 2;
+    font-size: 1.5rem;
+}
+
+.description {
+    margin: 0px;
+    font-size: 1.2rem;
+}
+
+.centered{
+    margin: auto;
+}
+
+.align-center, .img-handler{
+    display: flex;
+    justify-content: center;
+}
+
+.align-left{
+    display: flex;
+    justify-content: left;
+}
+
+.img-handler{
+    position: relative;
+}
+
+.color-selector{
+    padding: 12px;
+    margin: 5px;
+    border-radius: 50%;
+    /* background-color: red; */
+    border: 5px solid transparent;
+    display: inline-block;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.color-selector.selected, .color-selector:hover, .color-selector:focus{
+    border-width: 7px;
+    padding: 10px;
+}
+
+.hidden{
+    display: none;
+}
+
+.note{
+    line-height: 1.5;
+}
+
+.img-logo{
+    position: absolute;
+    object-fit: contain;
+    bottom: 40px;
+    height: 24px;
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .column-responsive{
+        width: 100%;
+    }
+    .preview{
+        /* width: 100%; */
+        float: unset;
+    }
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.umbrella-controller.load{
+    pointer-events: none;
+}
+
+.umbrella-controller.load .upload-icon, .umbrella-controller.load .preview{
+    content:url(../loader_icon.svg);
+    animation: spin 2s infinite linear;
+}
+
+.umbrella-controller.load .upload-icon{
+    width: 18px;
+}
+
+.umbrella-controller.load .preview{
+    width: 100px;
+    padding: 0px;
+}
+
+.umbrella-controller.load .img-logo{
+    display: none;
+}
+
+/*Pink Color*/
+.color-selector.pink{
+    background-color: var(--pink-primary-color);
+    border-color: var(--pink-secondary-color);
+}
+.umbrella-controller.theme-pink .custom-btn{
+    background-color: var(--pink-primary-color);
+}
+.bg-yellow{
+    background-color: var(--pink-tertiary-color);
+}
+/*End*/
+/*Blue Color*/
+.color-selector.blue{
+    background-color: var(--blue-primary-color);
+    border-color: var(--blue-secondary-color);
+}
+
+.umbrella-controller.theme-blue .custom-btn{
+    background-color: var(--blue-primary-color);
+}
+.bg-blue{
+    background-color: var(--blue-tertiary-color);
+}
+/*End*/
+/*Yellow Color*/
+.color-selector.yellow{
+    background-color: var(--yellow-primary-color);
+    border-color: var(--yellow-secondary-color);
+}
+
+.umbrella-controller.theme-yellow .custom-btn{
+    background-color: var(--yellow-primary-color);
+}
+
+.bg-yellow{
+    background-color: var(--yellow-tertiary-color);
+}
+/*End*/

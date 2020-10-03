@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umbrella Customizer by Vinod Selvin Nadar</title>
+    <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+<body>
+    <div class="container centered umbrella-controller theme-blue">
+        <div class="column-responsive img-handler">
+            <img src="" class="preview">
+            <img src="" class="img-logo" />
+        </div>
+        <div class="column-responsive align-left">
+            <div>
+                <h1 class="title">Custom Umbrella</h1>
+                <div class="color-container">
+                    <div class="color-selector pink" data-color="pink"></div>
+                    <div class="color-selector blue" data-color="blue"></div>
+                    <div class="color-selector yellow" data-color="yellow"></div>
+                </div>
+                <h3 class="sub-title">Customize your umbrella</h3>
+                <p class="description">Upload a logo for an instant preview.</p>
+                <p class="note">.png and .jpg files only. Max file size is 5MB.</p>
+                
+                <button class="custom-btn upload-logo-btn">
+                    <img src="./assets/upload_icon.svg" class="upload-icon"/> 
+                    <span class="upload-text">UPLOAD LOGO</span>
+                    <span class="close hidden">X</span>
+                </button>
+                <input id='upload-file' type='file' accept="image/x-png,image/jpeg" hidden/>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/umbrella.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
